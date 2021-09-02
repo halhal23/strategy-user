@@ -6,6 +6,12 @@ type UserInteractor struct {
 	UserRepo UserRepo
 }
 
+func NewUserInteractor(repo UserRepo) *UserInteractor {
+	return &UserInteractor{
+		UserRepo: repo,
+	}
+}
+
 func (interactor *UserInteractor) Add(user domain.UserModel) (err error) {
 	_, err = interactor.UserRepo.Store(user)
 	return 
@@ -17,7 +23,7 @@ func (interactor *UserInteractor) UserById(id int64) (user domain.UserModel, err
 }
 
 
-func (interactor *UserInteractor) Users(id int64) (users []domain.UserModel, err error) {
+func (interactor *UserInteractor) Users() (users []domain.UserModel, err error) {
 	users, err = interactor.UserRepo.FindAll()
 	return
 }
