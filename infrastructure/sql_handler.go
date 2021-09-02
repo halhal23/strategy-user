@@ -13,7 +13,7 @@ type SqlHandler struct {
 }
 
 func NewSqlHandler() database.SqlHandler {
-	conn, err := sql.Open("mysql", "root:@tcp(db:3306)/sample")
+	conn, err := sql.Open("mysql", "root:@tcp(localhost:3306)/strategy_dev")
 	if err != nil {
 		fmt.Println("infra/sql_handler でエラー発生")
 		fmt.Println(err.Error())
