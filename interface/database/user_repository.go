@@ -50,7 +50,7 @@ func (repo *UserRepo) FindAll() (users []domain.UserModel, err error) {
 	defer row.Close()
 	for row.Next() {
 		user := domain.UserModel{}
-		row.Scan(&user.ID, &user.Name, &user.Name)
+		row.Scan(&user.ID, &user.Name, &user.Email)
 		users = append(users, user)
 	}
 	return

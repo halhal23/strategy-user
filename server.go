@@ -5,6 +5,5 @@ import (
 )
 
 func main() {
-	r := infrastructure.NewRouter()
-	r.Run()
+	infrastructure.Router.Run()
 }
