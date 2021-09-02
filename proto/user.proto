@@ -42,7 +42,7 @@ message ListUserRequest {
 }
 
 message ListUserResponse {
-    User user = 1;
+    repeated User user = 1;
 }
 
 service UserService {
