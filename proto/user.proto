@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+option go_package = "pkg/pb";
+
+message User {
+    int64 id = 1;
+    string name = 2;
+    string email = 3;
+}
+
+message UserInput {
+    string name = 1;
+    string email = 2;
+}
+
+/* 
+    Create
+*/
+message CreateUserRequest {
+    UserInput userInput = 1;
+}
+
+message CreateUserResponse {
+    int64 id = 1;
+}
+
+/* 
+    Read 
+*/
+message ReadUserRequest {
+    int64 id = 1;
+}
+
+message ReadUserResponse {
+    User user = 1;
+}
+
+/* 
+    List
+*/
+message ListUserRequest {
+}
+
+message ListUserResponse {
+    repeated User user = 1;
+}
+
+service UserService {
+    rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+    rpc ReadUser (ReadUserRequest) returns (ReadUserResponse);
+    rpc ListUser (ListUserRequest) returns (ListUserResponse);
+}
