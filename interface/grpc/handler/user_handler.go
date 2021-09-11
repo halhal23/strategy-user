@@ -17,7 +17,7 @@ func NewUserHandler(interactor *usecase.UserInteractor) *UserHandler {
 	}
 }
 
-func (handler *UserHandler) CreateUser(ctx *context.Context, req *pb.CreateUserRequest) (*pb.CreateUserResponse, error) {
+func (handler *UserHandler) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*pb.CreateUserResponse, error) {
 	input := req.GetUserInput()
 	user := domain.UserModel{
 		Name: input.Name,
@@ -30,7 +30,7 @@ func (handler *UserHandler) CreateUser(ctx *context.Context, req *pb.CreateUserR
 	return &pb.CreateUserResponse{Id: 200}, nil
 }
 
-func (handler *UserHandler) ReadUser(ctx *context.Context, req *pb.ReadUserRequest) (*pb.ReadUserResponse, error) {
+func (handler *UserHandler) ReadUser(ctx context.Context, req *pb.ReadUserRequest) (*pb.ReadUserResponse, error) {
 	id := req.GetId()
 	user, err := handler.UserInteractor.UserById(id)
 	if err != nil {
@@ -44,7 +44,7 @@ func (handler *UserHandler) ReadUser(ctx *context.Context, req *pb.ReadUserReque
 	}, nil
 }
 
-func (handler *UserHandler) ListUser(req *pb.ListUserRequest) (*pb.ListUserResponse, error) {
+func (handler *UserHandler) ListUser(ctx context.Context, req *pb.ListUserRequest) (*pb.ListUserResponse, error) {
 	users, err := handler.UserInteractor.Users()
 	if err != nil {
 		return nil, err
