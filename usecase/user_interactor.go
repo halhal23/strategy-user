@@ -1,6 +1,6 @@
 package usecase
 
-import "strategy-user/domain"
+import "github.com/halhal23/strategy-user/domain"
 
 type UserInteractor struct {
 	UserRepo UserRepo

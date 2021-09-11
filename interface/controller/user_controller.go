@@ -1,10 +1,11 @@
 package controller
 
 import (
-	"strategy-user/domain"
-	"strategy-user/interface/database"
-	"strategy-user/usecase"
 	"strconv"
+
+	"github.com/halhal23/strategy-user/domain"
+	"github.com/halhal23/strategy-user/interface/database"
+	"github.com/halhal23/strategy-user/usecase"
 )
 
 type UserController struct {

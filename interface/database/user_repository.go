@@ -2,7 +2,8 @@ package database
 
 import (
 	"fmt"
-	"strategy-user/domain"
+
+	"github.com/halhal23/strategy-user/domain"
 )
 
 type UserRepo struct {

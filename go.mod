@@ -1,4 +1,4 @@
-module strategy-user
+module github.com/halhal23/strategy-user
 
 go 1.16
 

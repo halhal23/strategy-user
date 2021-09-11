@@ -3,7 +3,8 @@ package infrastructure
 import (
 	"database/sql"
 	"fmt"
-	"strategy-user/interface/database"
+
+	"github.com/halhal23/strategy-user/interface/database"
 
 	_ "github.com/go-sql-driver/mysql"
 )

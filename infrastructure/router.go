@@ -1,7 +1,7 @@
 package infrastructure
 
 import (
-	"strategy-user/interface/controller"
+	"github.com/halhal23/strategy-user/interface/controller"
 
 	"github.com/gin-gonic/gin"
 )

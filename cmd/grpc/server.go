@@ -3,11 +3,12 @@ package main
 import (
 	"fmt"
 	"net"
-	"strategy-user/infrastructure"
-	"strategy-user/interface/database"
-	"strategy-user/interface/grpc/handler"
-	"strategy-user/pkg/pb"
-	"strategy-user/usecase"
+
+	"github.com/halhal23/strategy-user/infrastructure"
+	"github.com/halhal23/strategy-user/interface/database"
+	"github.com/halhal23/strategy-user/interface/grpc/handler"
+	"github.com/halhal23/strategy-user/pkg/pb"
+	"github.com/halhal23/strategy-user/usecase"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"

@@ -2,9 +2,10 @@ package handler
 
 import (
 	"context"
-	"strategy-user/domain"
-	"strategy-user/pkg/pb"
-	"strategy-user/usecase"
+
+	"github.com/halhal23/strategy-user/domain"
+	"github.com/halhal23/strategy-user/pkg/pb"
+	"github.com/halhal23/strategy-user/usecase"
 )
 
 type UserHandler struct {
